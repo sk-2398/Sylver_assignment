@@ -51,14 +51,14 @@ const Navbar = () => {
                             
                                 <Link className="nav-link" aria-current="page" to="/login">Login</Link>
                             </li>
-                            {user_id && <li className="nav-item">
+                            <li className="nav-item">
                                 {/* <Link className="nav-link active" aria-current="page" to="/update" onClick={getUser}>Update</Link> */}
                                 <Link type="button" className="nav-link" data-bs-toggle="modal" onClick={getUser} data-bs-target="#exampleModal">
                                     Update
                                 </Link>
 
                                 <Update id={user._id} fname={user.firstname} lname={user.lastname} email={user.email}/>
-                            </li>}
+                            </li>
                         </ul>
                     </div>
                 </div>
