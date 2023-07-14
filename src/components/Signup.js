@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
+import {  useNavigate } from "react-router-dom";
 
 const Signup = () => {
+    const navigation=useNavigate()
 
     const [credentials,setCredentials]=useState({firstname:"",lastname:"",email:"",password:""});
 
@@ -18,6 +20,8 @@ const Signup = () => {
           console.log(json);
           if (json.success){
             alert('Successfull Signup!!')
+            setCredentials({firstname:"",lastname:"",email:"",password:""})
+            navigation("/")
           }
           else{
             alert(json)
